@@ -5,3 +5,5 @@ function Date({date}) {
         <p>{date}</p>
     )
 }
+
+export default Date

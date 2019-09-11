@@ -5,7 +5,7 @@ function Figure(props) {
 
     return (
         <figure>
-            <img src={src} alt = {alt} />
+            <img src={src} alt={alt} />
         </figure>
     )
 }

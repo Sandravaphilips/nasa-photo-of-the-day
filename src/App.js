@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import axios from 'axios';
 import "./App.css";
 import Date from './Date'
@@ -33,14 +33,14 @@ function App() {
     })
   }, [])
 
-  if (!content) return <h3>Loading...</h3>;
+  if (!content.imageUrl) return <h3>Loading...</h3>;
   return (
     <div className="App">
-      <Title title={title} />
-      <Date date={date} />
-      <Figure src={imageUrl} alt='photo-of-the-day' />
-      <Paragraph text={text} />
-      <Footer copyright={copyright} />
+      <Title title={content.title} />
+      <Date date={content.date} />
+      <Figure src={content.imageUrl} alt='photo-of-the-day' />
+      <Paragraph text={content.text} />
+      <Footer copyright={content.copyright} />
 
     </div>
   );
