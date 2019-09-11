@@ -1,5 +1,11 @@
 import React, {useState} from "react";
+import axios from 'axios';
 import "./App.css";
+import Date from './Date'
+import Paragraph from "./Paragraph";
+import Figure from "./Figure";
+import Footer from "./Footer";
+import Title from "./Title";
 
 function App() {
   const [content, setContent] = useState({
@@ -26,12 +32,16 @@ function App() {
       })
     })
   }, [])
+
+  if (!content) return <h3>Loading...</h3>;
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
+      <Title title={title} />
+      <Date date={date} />
+      <Figure src={imageUrl} alt='photo-of-the-day' />
+      <Paragraph text={text} />
+      <Footer copyright={copyright} />
+
     </div>
   );
 }
