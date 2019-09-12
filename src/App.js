@@ -9,6 +9,7 @@ import Footer from "./Footer";
 import Title from "./Title";
 import styled from 'styled-components';
 
+
 const AppStyle = styled.div`
   background-color: black;
   margin: 0 auto;
@@ -50,7 +51,7 @@ function App() {
   if (!content.imageUrl) return <h3>Loading...</h3>;
   return (
     <AppStyle className="App">
-      <Navigation home='index.html' />
+      <Navigation home='index.html' nasaWebsite='https://www.nasa.gov/'/>
       <h1>Astronomy Photo Of The Day</h1>
       <Title title={content.title} />
       <Date date={content.date} />
