@@ -1,5 +1,11 @@
+/* #root>div {
+  background-color: #393939;
+} */
+
 .App {
   text-align: center;
+  /* background-color: #393939; */
+  /* top: 0; */
 }
 
 .App-logo {
