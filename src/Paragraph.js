@@ -5,6 +5,7 @@ const ParagraphStyle = styled.div`
     font-family: cursive;
     text-align: start;
     margin-top: 30px;
+    padding: 0 20px;
 `
 
 function Paragraph({text}) {

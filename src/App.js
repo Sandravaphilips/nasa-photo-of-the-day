@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import axios from 'axios';
 import "./App.css";
+import Navigation from './Navigation'
 import Date from './Date'
 import Paragraph from "./Paragraph";
 import Figure from "./Figure";
@@ -11,7 +12,7 @@ import styled from 'styled-components';
 const AppStyle = styled.div`
   background-color: black;
   margin: 0 auto;
-  padding: 20px;
+  padding-bottom: 20px;
   color: white;
 
   h1 {
@@ -49,6 +50,7 @@ function App() {
   if (!content.imageUrl) return <h3>Loading...</h3>;
   return (
     <AppStyle className="App">
+      <Navigation home='index.html' />
       <h1>Astronomy Photo Of The Day</h1>
       <Title title={content.title} />
       <Date date={content.date} />
